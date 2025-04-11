@@ -79,3 +79,8 @@ Not Found: /favicon.ico
 [11/Apr/2025 19:12:11] "GET /favicon.ico HTTP/1.1" 404 2212
 (env_mango) PS C:\Users\arkas\Desktop\Django_group_project\hit237_building_software\hit237_project\mango_proj> deactivate
 PS C:\Users\arkas\Desktop\Django_group_project\hit237_building_software\hit237_project\mango_proj>
+PS C:\Users\arkas\Desktop\Django_group_project\hit237_building_software\hit237_project\mango_proj> cd C:\Users\arkas\Desktop\Django_group_project\hit237_building_software\hit237_project
+PS C:\Users\arkas\Desktop\Django_group_project\hit237_building_software\hit237_project> .\env_mango\Scripts\activate.ps1
+(env_mango) PS C:\Users\arkas\Desktop\Django_group_project\hit237_building_software\hit237_project> cd mango_proj
+(env_mango) PS C:\Users\arkas\Desktop\Django_group_project\hit237_building_software\hit237_project\mango_proj> python manage.py startapp mango_pests
+(env_mango) PS C:\Users\arkas\Desktop\Django_group_project\hit237_building_software\hit237_project\mango_proj> mkdir mango_pests\templates\mango_pests
