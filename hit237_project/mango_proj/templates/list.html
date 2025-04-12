@@ -1,0 +1,32 @@
+
+<!---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mango Pest Home</title>
+</head>
+<body>
+    <h1>Welcome to the Mango Pest Info Site!</h1>
+    <p>This is the home page.</p>
+</body>
+</html>
+-->
+<!-- mango_pests/templates/mango_pests/list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pest List</title>
+</head>
+<body>
+    <h1>Mango Pests</h1>
+    <ul>
+        {% for pest in pests %}
+        <li>
+            <h3>{{ pest.name }}</h3>
+            <p>{{ pest.desc }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
