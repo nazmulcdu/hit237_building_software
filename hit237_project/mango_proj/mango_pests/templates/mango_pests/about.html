@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head><title>About</title></head>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>About</title>
+</head>
 <body>
     <nav>
         <a href="{% url 'home' %}">Home</a> |
