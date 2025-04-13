@@ -19,4 +19,4 @@ pests_list = [
 
 def pest_list(request):
     pests_data = [pest.to_dict() for pest in pests_list]
-    return render(request, 'mango_pests/list.html', {'pests': pests_data})
+    return render(request, 'mango_pests/list.html', {'pests': pests_data})  # Updated path
