@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ pest.name }} - Details</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}">Home</a> |
+        <a href="{% url 'pest_list' %}">Pest List</a> |
+        <a href="{% url 'about' %}">About</a>
+    </nav>
+
+    <h1>{{ pest.name }}</h1>
+    <img src="{% static pest.image_url %}" alt="{{ pest.name }}" width="300">
+
+    <h3>Full Description</h3>
+    <p>{{ pest.full_description }}</p>
+
+    <h3>Symptoms</h3>
+    <p>{{ pest.symptoms }}</p>
+
+    <h3>Treatment</h3>
+    <p>{{ pest.treatment }}</p>
+</body>
+</html>

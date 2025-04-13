@@ -1,22 +1,17 @@
-from django.shortcuts import render
-from .pest_data import MangoPestDisease
+from django.shortcuts import render, get_object_or_404
+from .pest_data import mango_pestdiseases
 
-# Sample data (2 pests for testing)
-pests_list = [
-    MangoPestDisease(
-        id="anthracnose",
-        name="Anthracnose",
-        brief_desc="Fungal disease causing dark lesions",
-        image="anthracnose.jpg"
-    ),
-    MangoPestDisease(
-        id="fruit-fly",
-        name="Fruit Fly",
-        brief_desc="Insect pest that attacks fruits",
-        image="fruit-fly.jpg"
-    )
-]
+def home(request):
+    return render(request, 'mango_pests/home.html')
+
+def about(request):
+    return render(request, 'mango_pests/about.html')
 
 def pest_list(request):
-    pests_data = [pest.to_dict() for pest in pests_list]
-    return render(request, 'mango_pests/list.html', {'pests': pests_data})  # Updated path
+    return render(request, 'mango_pests/list.html', {'pests': mango_pestdiseases})
+
+def pest_detail(request, slug):
+    pest = next((p for p in mango_pestdiseases if p.slug == slug), None)
+    if not pest:
+        return render(request, 'mango_pests/not_found.html', status=404)
+    return render(request, 'mango_pests/detail.html', {'pest': pest})
