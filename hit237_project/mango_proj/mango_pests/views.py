@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from .pest_data import mango_pestdiseases
 
 def home(request):

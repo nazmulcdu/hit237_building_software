@@ -55,7 +55,7 @@ ROOT_URLCONF = 'mango_proj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'mango_pests' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
