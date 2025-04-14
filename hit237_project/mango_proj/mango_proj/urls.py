@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('mango_pests.urls')),  # include your app routes
+    path('', include('mango_pests.urls')),  # include your app routess
 ]
