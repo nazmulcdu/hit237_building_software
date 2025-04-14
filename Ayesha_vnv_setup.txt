@@ -1,0 +1,7 @@
+cd desktop
+cd Interactive Software Django
+cd hit237_building_software
+cd hit237_project
+cd mango_proj
+venv\Scripts\activate
+python manage.py runserver
