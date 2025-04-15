@@ -59,23 +59,24 @@ pest5 =MangoPestDisease(
 )
 
 pest6 =MangoPestDisease(
-    slug="dieback",
-    name="Dieback",
-    short_desc="Fungal infection causing branch death.",
-    image_url="images/dieback.jpg",
-    full_description="Dieback is caused by fungi like *Botryodiplodia theobromae*, leading to the drying of twigs and branches.",
-    symptoms="Wilting and drying of branches, gum discharge.",
-    treatment="Prune infected parts and apply fungicides."
+    slug="fruit-flies",
+    name="Fruit Flies",
+    short_desc="Fruit-flies lay eggs on mangoes, causing damage to the fruit and crop.",
+    image_url="images/fruitflies.png",
+    full_description=
+    "Fruit flies are labelled as one of the major pests in the Northern Territory due to their negative effects on a variety of fruit crops, particularly mangoes. The two main species of fruit flies include Bactocera tyroni and Bactocera jarvisi and they both have negative effects on the harvest of mangoes (E. S. C. Smith and H. Brown, 2014).",
+    symptoms="•Decay of fruit flesh •Bruising on fruit skin, and sting marks",
+    treatment="•Bait spraying to divert the flies to feed on the bait • Cover mangoes with bags so they are not reachable • Fruit dipping would kill any eggs on the fruits • Remove any ripe/overripe mangose or just before they ripe so that the flies do not get a chance to lay eggs."
 )
 
 pest7 = MangoPestDisease(
-    slug="red-rust",
-    name="Red Rust",
-    short_desc="Algae infection turning leaves rusty red.",
-    image_url="images/red_rust.jpg",
-    full_description="Caused by *Cephaleuros virescens*, red rust leads to poor photosynthesis and yield.",
-    symptoms="Rusty patches on upper leaf surface.",
-    treatment="Copper fungicides. Remove infected leaves."
+    slug="mango-scale",
+    name="Mango Scale",
+    short_desc="Mango Scales are insects feeding on the sap of mango trees, damaging the crop",
+    image_url="images/mangoscale.png",
+    full_description="There are two types of mango scales: False mango scales and White mango scales (Chin et al., 2010). Mango scales are insects that consume and live off the sap from plants, feeding mainly on the protein within the sap (Owen, 2016). After consuming the sap, the overall health of the plant is damaged and the remaining sugary contents in the sap are excreted on the plant, leading to the growth of black mould (Owen, 2016).",
+    symptoms="•Areas on leaves may appear pale green or yellow • Pink spots on the mango",
+    treatment="•Growth regulators and systematic sprays should be used for live and preferrably young scales. • Apply the chemicals prior to pruning to prevent infestation. • If scales are still active after pruning, use stroger mineral oils for spraying. • After pruning, cut off any infected branches to avoid spreading of the scales."
 )
 
 mango_pestdiseases = [pest1, pest2, pest3, pest4, pest5, pest6, pest7]
