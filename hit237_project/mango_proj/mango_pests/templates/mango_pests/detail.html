@@ -18,6 +18,13 @@
     <h3>Full Description</h3>
     <p>{{ pest.full_description }}</p>
 
+    <h3>Image Gallery</h3>
+<div class="image-gallery">
+  {% for image in pest.images %}
+    <img src="{% static image %}" alt="{{ pest.name }} image" style="width:200px; margin:10px;">
+  {% endfor %}
+</div>
+
     <h3>Symptoms</h3>
     <p>{{ pest.symptoms }}</p>
 

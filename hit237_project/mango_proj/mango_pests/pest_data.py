@@ -32,7 +32,7 @@ pest3 = MangoPestDisease(
     slug="mango-leafhoppers",
     name="Mango Leafhoppers",
     short_desc="Sap-sucking insects that damage mango flowers and reduce yield.",
-    image_url="images/leafhopper.jpg",  # Consider updating to an actual mango leafhopper image
+    image_url="images/Mango leafhopper img1.jpeg",
     full_description=(
         "Mango leafhoppers are serious pests found throughout mango-growing regions in India, South-East Asia, "
         "Papua New Guinea, and northern Australia including Darwin, Palmerston, Pine Creek, and Katherine. "
@@ -42,18 +42,18 @@ pest3 = MangoPestDisease(
         "due to honeydew excretion. Certain mango cultivars like Kensington Pride and Irwin may be more affected."
     ),
     symptoms=(
-        "• Curling and distortion of young leaves\n"
-        "• Sooty mould on older leaves due to honeydew\n"
-        "• Numerous punctures in flower stems leading to flower drop\n"
-        "• Sap-sucking damage on vegetative flush\n"
-        "• Presence of small, wedge-shaped adult insects or fast-moving nymphs on flush and flowers"
+        " Curling and distortion of young leaves\n"
+        " Sooty mould on older leaves due to honeydew\n"
+        " Numerous punctures in flower stems leading to flower drop\n"
+        " Sap-sucking damage on vegetative flush\n"
+        " Presence of small, wedge-shaped adult insects or fast-moving nymphs on flush and flowers"
     ),
     treatment=(
-        "• Apply two cover sprays of dimethoate or carbaryl seven days apart before flowering\n"
-        "• Target pests before flowering to reduce damage and protect pollinators\n"
-        "• Use the same timing and methods as redbanded thrips control\n"
-        "• Encourage natural predators such as native lacewing larvae\n"
-        "• Monitor mango trees regularly, especially during flowering and fruiting seasons"
+        " Apply two cover sprays of dimethoate or carbaryl seven days apart before flowering\n"
+        " Target pests before flowering to reduce damage and protect pollinators\n"
+        " Use the same timing and methods as redbanded thrips control\n"
+        " Encourage natural predators such as native lacewing larvae\n"
+        " Monitor mango trees regularly, especially during flowering and fruiting seasons"
     )
 )
 
@@ -62,7 +62,7 @@ pest4 = MangoPestDisease(
     slug="mango-seed-weevil",
     name="Mango Seed-Weevil",
     short_desc="Internal pest that damages mango seeds and limits market access.",
-    image_url="images/stem_borer.jpg",  # You may want to replace this with an actual seed-weevil image
+    image_url="images/Mango seed weevil img3(inside seed).jpg",  
     full_description=(
         "The mango seed weevil is a serious internal pest that affects the seed of mango fruit. "
         "Its presence reduces market options and disqualifies fruit from entry into key export destinations "
@@ -93,7 +93,7 @@ pest5 = MangoPestDisease(
     slug="mango-scab",
     name="Mango Scab",
     short_desc="Fungal disease causing scabby lesions on mango fruit and leaves.",
-    image_url="images/mango_scab.jpg",
+    image_url="images/Mango scab img2.jpg",
     full_description="Mango scab is caused by the fungus *Elsinoë mangiferae*. It affects young mango tissue, particularly in humid and wet environments. Initially mistaken for anthracnose, it causes scabby lesions and can severely scar fruit, especially in nursery plants.",
     symptoms=(
         " Small black lesions on young fruit\n"
