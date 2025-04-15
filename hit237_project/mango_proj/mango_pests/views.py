@@ -18,3 +18,6 @@ def pest_detail(request, slug):
 
 def pest_list_view(request):
     return render(request, 'pests.html', {'pests': mango_pestdiseases})
+
+def preventive_tips(request):
+    return render(request, 'mango_pests/preventive_tips.html')

@@ -6,4 +6,7 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('pests/', views.pest_list, name='pest_list'),
     re_path(r'^pests/(?P<slug>[\w-]+)/$', views.pest_detail, name='pest_detail'),
+
+     path('preventive-tips/', views.preventive_tips, name='preventive_tips'),
+
 ]
