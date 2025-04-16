@@ -246,19 +246,67 @@ pest6 =MangoPestDisease(
     short_desc="Fruit-flies lay eggs on mangoes, causing damage to the fruit and crop.",
     image_url="images/fruitflies.png",
     full_description=
-    "Fruit flies are labelled as one of the major pests in the Northern Territory due to their negative effects on a variety of fruit crops, particularly mangoes. The two main species of fruit flies include Bactocera tyroni and Bactocera jarvisi and they both have negative effects on the harvest of mangoes (E. S. C. Smith and H. Brown, 2014).",
-    symptoms="•Decay of fruit flesh •Bruising on fruit skin, and sting marks",
-    treatment="•Bait spraying to divert the flies to feed on the bait • Cover mangoes with bags so they are not reachable • Fruit dipping would kill any eggs on the fruits • Remove any ripe/overripe mangose or just before they ripe so that the flies do not get a chance to lay eggs."
+    ("Fruit flies are labelled as one of the major pests in the Northern Territory due to their negative effects on a variety of fruit crops, particularly mangoes."
+     " The two main species of fruit flies include Bactocera tyroni (left of figure above) and Bactocera jarvisi (right of figure above) and they both have negative effects on the harvest of mangoes (E. S. C. Smith and H. Brown, 2014)."
+     " There appearance is simliar to a common house fly in terms of their size. However they are slightly larger than houselfies and appear yellow/ brown in colour."
+     " The life cycle of both of these species of flies typically ranges between 4-5 weeks within the weather in the Northern Territory; however, it can be longer in cooler areas (Smith and Brown, 2014)."
+     " These flies lay eggs on the ripe mangoes and once they hatch, the larvae burrows into the fruit, causing it to rot and as a result, destroying the whole crop."
+     "B.tyroni has 70+ hosts, meaning that they attack 70+ species of crops and B.jarvisi has 27 hosts, indicating that they attack 27 species of crops (Smith and Brown, 2014)."
+     ),
+    symptoms="""
+        <ul>
+            <li>Decay of fruit flesh</li>
+            <li>Bruising on fruit skin</li>
+            <li>sting marks</li>
+            <li>Squishy/ soft areas on the mango</li>
+            <li>Larvae inside mango</li>
+            <li>Fruit falling off tree by itself before ripening</li>
+        </ul>
+    """,
+
+    treatment="""
+        <ul>
+            <li>Harvest the mangoes just before ripening as the flies will tend to attack once the mango is ripe.</li>
+            <li>Bait spraying (including <b>protein + malathion</b>) would allow the flies to be diverted from the mangoes and feed on the bait to avoid the fruit from being affected.</li>
+            <li>Removing any ripe or overripe mangoes would prevent forming a breeding ground for these flies.</li>
+            <li>Covering these mangoes with bags would prevent flies from having the opportunity to lay eggs on the mangoes.</li>
+            <li>Fruit dipping can be implemented for commercial use, which kills any eggs that have been laid on the mangoes.</li>
+        </ul>
+""",
 )
 
 pest7 = MangoPestDisease(
     slug="mango-scale",
     name="Mango Scale",
     short_desc="Mango Scales are insects feeding on the sap of mango trees, damaging the crop",
-    image_url="images/mangoscale.png",
-    full_description="There are two types of mango scales: False mango scales and White mango scales (Chin et al., 2010). Mango scales are insects that consume and live off the sap from plants, feeding mainly on the protein within the sap (Owen, 2016). After consuming the sap, the overall health of the plant is damaged and the remaining sugary contents in the sap are excreted on the plant, leading to the growth of black mould (Owen, 2016).",
-    symptoms="•Areas on leaves may appear pale green or yellow • Pink spots on the mango",
-    treatment="•Growth regulators and systematic sprays should be used for live and preferrably young scales. • Apply the chemicals prior to pruning to prevent infestation. • If scales are still active after pruning, use stroger mineral oils for spraying. • After pruning, cut off any infected branches to avoid spreading of the scales."
+    image_url="images/mango_scale.png",
+    full_description=
+    ("There are two types of mango scales: False mango scales and White mango scales (Chin et al., 2010)."
+    " Male mango scales are typically smaller; however, they have wings meaning that they are able to travel within short distances. Female mango scales on the other hand are oval in shape and are stationary."
+    " Mango scales are insects that consume and live off the sap from plants, feeding mainly on the protein within the sap (Owen, 2016)."
+    " After consuming the sap, the overall health of the plant is damaged and the remaining sugary contents in the sap are excreted on the plant, leading to the growth of black mould (Owen, 2016)."
+    " The black mold that is formed on the leaves also blocks out the sunlight from reaching the leaves. This in turn blocks the process of photosynthesis, stopping the plant from converting the sunlight to energy."
+    " Mango scales can sometimes form underneath the leaves and on the stems, making them slightly harder to identify."
+    " The scales can easily spread from tree to tree through the wind and other insects spreading them from tree to tree. Any tools that were used on infected trees should be sanitised before resusing as they can spread through this way also."
+    ),
+    symptoms="""
+        <ul>
+            <li>Areas on leaves may appear pale green or yellow</li>
+            <li>Pink spots on the mango</li>
+            <li>Mango remaining small and not developing properly</li>
+            <li>Black mold growing on either the fruit or leaves</li>
+            <li>Small bumps appearing on whole crop</li>
+        </ul>
+    """,
+    treatment="""
+        <ul>
+            <li>Growth regulators and systematic sprays should be used for live and preferrably young scales.</li>
+            <li>Apply the chemicals prior to pruning to prevent infestation.</li>
+            <li>If scales are still active after pruning, use stroger mineral oils for spraying.</li>
+            <li>After pruning, cut off any infected branches to avoid spreading of the scales.</li>
+            <li>Dispose of any fallen branches, leaves, or fuit to avoid spreading the mango scales.</li>
+        </ul>
+""",
 )
 
 mango_pestdiseases = [pest1, pest2, pest3, pest4, pest5, pest6, pest7]
