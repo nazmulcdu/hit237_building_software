@@ -15,3 +15,9 @@ def pest_detail(request, slug):
     if not pest:
         return render(request, 'mango_pests/not_found.html', status=404)
     return render(request, 'mango_pests/detail.html', {'pest': pest})
+
+def pest_list_view(request):
+    return render(request, 'pests.html', {'pests': mango_pestdiseases})
+
+def preventive_tips(request):
+    return render(request, 'mango_pests/preventive_tips.html')

@@ -14,14 +14,18 @@
 
     <h1>Mango Pests and Diseases</h1>
 
-    <ul>
+    <ul class="card-container">
         {% for pest in pests %}
-        <li>
-            <h3><a href="{% url 'pest_detail' pest.slug %}">{{ pest.name }}</a></h3>
-            <p>{{ pest.short_desc }}</p>
-            <img src="{% static pest.image_url %}" alt="{{ pest.name }}" width="200">
+        <li class="card">
+            <img src="{% static pest.image_url %}" alt="{{ pest.name }}">
+            <div class="card-content">
+                <h3><a href="{% url 'pest_detail' pest.slug %}">{{ pest.name }}</a></h3>
+                <p>{{ pest.short_desc }}</p>
+                <a href="{% url 'pest_detail' pest.slug %}" class="read-more">Learn More</a>
+            </div>
         </li>
         {% endfor %}
     </ul>
+    
 </body>
 </html>

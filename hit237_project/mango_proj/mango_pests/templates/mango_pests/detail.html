@@ -19,9 +19,10 @@
     <p>{{ pest.full_description }}</p>
 
     <h3>Symptoms</h3>
-    <p>{{ pest.symptoms }}</p>
+    <p>{{ pest.symptoms|safe }}</p>
 
     <h3>Treatment</h3>
-    <p>{{ pest.treatment }}</p>
+    <p>{{ pest.treatment|safe }}</p>
+    
 </body>
 </html>
