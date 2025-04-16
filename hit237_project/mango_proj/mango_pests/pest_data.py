@@ -34,80 +34,114 @@ pest3 = MangoPestDisease(
     short_desc="Sap-sucking insects that damage mango flowers and reduce yield.",
     image_url="images/Mango leafhopper img1.jpeg",
     full_description=(
-        "Mango leafhoppers are serious pests found throughout mango-growing regions in India, South-East Asia, "
-        "Papua New Guinea, and northern Australia including Darwin, Palmerston, Pine Creek, and Katherine. "
-        "These small, wedge-shaped insects damage mango trees by feeding on sap and laying eggs in flower stems and leaves. "
-        "They are most damaging during the flowering season, potentially reducing yields by up to 50% if uncontrolled. "
-        "Their feeding and egg-laying activity leads to distorted leaves, flower abortion, fruit drop, and sooty mould formation "
-        "due to honeydew excretion. Certain mango cultivars like Kensington Pride and Irwin may be more affected."
+        "Mango leafhoppers are serious pests found throughout mango-growing regions in:\n"
+        "• India\n"
+        "• South-East Asia\n"
+        "• Papua New Guinea\n"
+        "• Northern Australia (including Darwin, Palmerston, Pine Creek, and Katherine)\n\n"
+        "These small, wedge-shaped insects damage mango trees by:\n"
+        "• Feeding on sap\n"
+        "• Laying eggs in flower stems and leaves\n\n"
+        "Key impacts:\n"
+        "• Most damaging during the flowering season\n"
+        "• Potentially reduce yields by up to 50% if uncontrolled\n"
+        "• Cause distorted leaves, flower abortion, fruit drop, and sooty mould formation due to honeydew excretion\n"
+        "• Certain mango cultivars like Kensington Pride and Irwin may be more affected"
     ),
-    symptoms=(
-        " Curling and distortion of young leaves\n"
-        " Sooty mould on older leaves due to honeydew\n"
-        " Numerous punctures in flower stems leading to flower drop\n"
-        " Sap-sucking damage on vegetative flush\n"
-        " Presence of small, wedge-shaped adult insects or fast-moving nymphs on flush and flowers"
-    ),
-    treatment=(
-        " Apply two cover sprays of dimethoate or carbaryl seven days apart before flowering\n"
-        " Target pests before flowering to reduce damage and protect pollinators\n"
-        " Use the same timing and methods as redbanded thrips control\n"
-        " Encourage natural predators such as native lacewing larvae\n"
-        " Monitor mango trees regularly, especially during flowering and fruiting seasons"
-    )
+    symptoms="""\
+<ul>
+  <li>Curling and distortion of young leaves</li>
+  <li>Sooty mould on older leaves due to honeydew</li>
+  <li>Numerous punctures in flower stems leading to flower drop</li>
+  <li>Sap-sucking damage on vegetative flush</li>
+  <li>Presence of small, wedge-shaped adult insects or fast-moving nymphs on flush and flowers</li>
+</ul>""",
+    treatment="""\
+<ul>
+  <li>Apply two cover sprays of dimethoate or carbaryl seven days apart before flowering</li>
+  <li>Target pests before flowering to reduce damage and protect pollinators</li>
+  <li>Use the same timing and methods as redbanded thrips control</li>
+  <li>Encourage natural predators such as native lacewing larvae</li>
+  <li>Monitor mango trees regularly, especially during flowering and fruiting seasons</li>
+</ul>"""
 )
+
+
 
 
 pest4 = MangoPestDisease(
     slug="mango-seed-weevil",
     name="Mango Seed-Weevil",
     short_desc="Internal pest that damages mango seeds and limits market access.",
-    image_url="images/Mango seed weevil img3(inside seed).jpg",  
+    image_url="images/Mango seed weevil img3(inside seed).jpg",
     full_description=(
-        "The mango seed weevil is a serious internal pest that affects the seed of mango fruit. "
-        "Its presence reduces market options and disqualifies fruit from entry into key export destinations "
-        "like Western Australia, China, Korea, the USA, and the UAE. Weevils spread through infested seed, "
-        "flight between trees, unmanaged orchards, and discarded fruit piles. Adults shelter under rough bark "
-        "and become active at dawn and dusk, feeding on new flush growth. Eggs are laid when fruit reach around 30mm "
-        "in size, and hatching larvae bore into the seed. Development occurs entirely inside the fruit, and adult weevils "
-        "can emerge from fruit left on the ground after rain or irrigation."
+        "The mango seed weevil is a serious internal pest that affects the seed of mango fruit. Its presence:\n"
+        "• Reduces market options\n"
+        "• Disqualifies fruit from entry into key export destinations like Western Australia, China, Korea, the USA, and the UAE\n\n"
+        "Weevils spread through:\n"
+        "• Infested seed\n"
+        "• Flight between trees\n"
+        "• Unmanaged orchards\n"
+        "• Discarded fruit piles\n\n"
+        "Adult behavior and lifecycle:\n"
+        "• Adults shelter under rough bark and become active at dawn and dusk\n"
+        "• Feed on new flush growth\n"
+        "• Eggs laid when fruit reach around 30mm in size\n"
+        "• Larvae bore into the seed and develop entirely inside the fruit\n"
+        "• Adults can emerge from fruit left on the ground after rain or irrigation"
     ),
-    symptoms=(
-        "• Presence of egg-laying scars on fruit\n"
-        "• Feeding damage on new flushes\n"
-        "• Gum exudation or frass near holes in bark\n"
-        "• Larvae found inside cut fruit or seeds\n"
-        "• Adults found under bark during winter"
-    ),
-    treatment=(
-        "• Remove all fruit from orchards, including fallen fruit\n"
-        "• Destroy or remove reject fruit and fruit dumps from the farm\n"
-        "• Mulch fallen fruit and prunings before weevils emerge\n"
-        "• Target adults using insecticides during emergence, flowering, flushing, and on tree trunks\n"
-        "• Use systemic insecticides to target larvae in fruit\n"
-        "• Monitor by inspecting for adults under bark and signs of damage on new growth"
+    symptoms="""\
+<ul>
+  <li>Presence of egg-laying scars on fruit</li>
+  <li>Feeding damage on new flushes</li>
+  <li>Gum exudation or frass near holes in bark</li>
+  <li>Larvae found inside cut fruit or seeds</li>
+  <li>Adults found under bark during winter</li>
+</ul>""",
+    treatment="""\
+<ul>
+  <li>Remove all fruit from orchards, including fallen fruit</li>
+  <li>Destroy or remove reject fruit and fruit dumps from the farm</li>
+  <li>Mulch fallen fruit and prunings before weevils emerge</li>
+  <li>Target adults using insecticides during emergence, flowering, flushing, and on tree trunks</li>
+  <li>Use systemic insecticides to target larvae in fruit</li>
+  <li>Monitor by inspecting for adults under bark and signs of damage on new growth</li>
+</ul>"""
     )
-)
+
 
 pest5 = MangoPestDisease(
     slug="mango-scab",
     name="Mango Scab",
     short_desc="Fungal disease causing scabby lesions on mango fruit and leaves.",
     image_url="images/Mango scab img2.jpg",
-    full_description="Mango scab is caused by the fungus *Elsinoë mangiferae*. It affects young mango tissue, particularly in humid and wet environments. Initially mistaken for anthracnose, it causes scabby lesions and can severely scar fruit, especially in nursery plants.",
-    symptoms=(
-        " Small black lesions on young fruit\n"
-        " Corky, scarred tissue with central scabs\n"
-        " Brown haloed spots and leaf distortion\n"
-        " Elongated lesions on midrib and stem"
+    full_description=(
+        "Mango scab is a fungal disease caused by *Elsinoë mangiferae*, which primarily affects young mango tissue. "
+        "It thrives in humid and wet environments, making it a common issue in nurseries and regions with frequent rainfall.\n\n"
+        "Key facts about mango scab:\n"
+        "• Often mistaken for anthracnose in early stages\n"
+        "• Causes scabby lesions that lead to severe fruit scarring\n"
+        "• Most damaging to nursery plants and young fruit\n"
+        "• Can distort leaves and reduce fruit marketability"
     ),
-    treatment=(
-        " Apply copper fungicide sprays from flowering to half fruit size.\n"
-        " Weekly copper sprays in nurseries during wet weather.\n"
-        " Prune infected leaves, twigs, and dead plant matter.\n"
-        " Avoid mixing copper with zinc fertilizers due to phyto-toxicity risks."
-    )
+   symptoms="""\
+<ul>
+  <li>Small black lesions on young fruit</li>
+  <li>Corky, scarred tissue with central scabs</li>
+  <li>Brown haloed spots and leaf distortion</li>
+  <li>Elongated lesions on midrib and stem</li>
+</ul>
+""",
+treatment="""\
+<ul>
+  <li>Apply copper fungicide sprays from flowering to half fruit size</li>
+  <li>Use weekly copper sprays in nurseries during wet weather</li>
+  <li>Prune infected leaves, twigs, and dead plant matter</li>
+  <li>Avoid mixing copper with zinc fertilizers due to phyto-toxicity risks</li>
+</ul>
+""",
 )
+
 
 
 pest6 =MangoPestDisease(
