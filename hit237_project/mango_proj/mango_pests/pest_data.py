@@ -128,7 +128,8 @@ pest3 = MangoPestDisease(
     slug="mango-leafhoppers",
     name="Mango Leafhoppers",
     short_desc="Sap-sucking insects that damage mango flowers and reduce yield.",
-    image_url="images/Mango leafhopper img1.jpeg",
+    image_url="images/Mango leafhopper img7.jpeg",
+     # Citation:(Smith & Brown 2014)
     full_description=(
         "Mango leafhoppers are serious pests found throughout mango-growing regions in:\n"
         "• India\n"
@@ -170,6 +171,7 @@ pest4 = MangoPestDisease(
     name="Mango Seed-Weevil",
     short_desc="Internal pest that damages mango seeds and limits market access.",
     image_url="images/Mango seed weevil img3(inside seed).jpg",
+     #Citation: Weinert et al. (n.d.)
     full_description=(
         "The mango seed weevil is a serious internal pest that affects the seed of mango fruit. Its presence:\n"
         "• Reduces market options\n"
@@ -211,6 +213,7 @@ pest5 = MangoPestDisease(
     name="Mango Scab",
     short_desc="Fungal disease causing scabby lesions on mango fruit and leaves.",
     image_url="images/Mango scab img2.jpg",
+    # Citation: Conde et al. (2007)
     full_description=(
         "Mango scab is a fungal disease caused by *Elsinoë mangiferae*, which primarily affects young mango tissue. "
         "It thrives in humid and wet environments, making it a common issue in nurseries and regions with frequent rainfall.\n\n"
