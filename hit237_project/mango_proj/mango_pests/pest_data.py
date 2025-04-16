@@ -9,23 +9,119 @@ class MangoPestDisease:
         self.treatment = treatment
 
 pest1 = MangoPestDisease(
-    slug="anthracnose",
-    name="Anthracnose",
-    short_desc="Fungal disease causing black spots on fruit.",
-    image_url="images/anthracnose.jpg",
-    full_description="Anthracnose is a common fungal disease in mangoes caused by *Colletotrichum gloeosporioides*...",
-    symptoms="Dark, sunken lesions on fruits, stems and flowers.",
-    treatment="Use copper-based fungicides. Remove and destroy infected parts."
+    slug="mango-anthracnose",
+    name="Mango Anthracnose",
+    short_desc="A fungal disease causing dark lesions on leaves, flowers, and fruit. It spreads rapidly in humid conditions and affects mango yield and postharvest quality.",
+    image_url="images/mango anthracnoce spot.jpg",
+    full_description=(
+        "Mango anthracnose is caused by the fungus *Colletotrichum gloeosporioides* "
+        "(teleomorph: *Glomerella cingulata*), including its variant *C. gloeosporioides var. minor* "
+        "(Pitkethley & Conde, 2007). It is one of the most destructive mango diseases in tropical and "
+        "subtropical climates, affecting leaves, flowers, stems, and fruits. Yield losses typically range "
+        "from 30–60%, but can reach 100% under very humid or rainy conditions (Paudel et al., 2022).\n\n"
+        "A unique risk of this disease is its latent infection capability. The fungus infects green fruits "
+        "while still on the tree and remains dormant until ripening. Once activated, it causes rapid rotting, "
+        "making postharvest control difficult. The fungus spreads via rain, wind, and irrigation and thrives "
+        "in high humidity (≥95%) and temperatures between 25–30°C, especially during flowering and fruit "
+        "development (Paudel et al., 2022).\n\n"
+        "Recent research by Li et al. (2024) explores eco-friendly control strategies, such as using edible "
+        "coatings with Chitosan (CTS) and Iturin A (IA). These coatings inhibit fungal growth, enhance the "
+        "fruit’s natural defences, and prolong shelf life by reducing lesion development by 69%, retaining "
+        "sugar and acidity levels, and limiting respiration."
+    ),
+    symptoms="""\
+<ul>
+  <li><strong>Leaves:</strong> Tan to dark brown spots, especially near edges; semi-circular lesions on new flushes exposed to rain (Pitkethley & Conde, 2007; Paudel et al., 2022).</li>
+  <li><strong>Flowers (Panicles):</strong> Tiny black or brown spots, leading to poor fruit set and flower drop (Paudel et al., 2022).</li>
+  <li><strong>Fruits:</strong> 
+    <ul>
+      <li>Young fruits: Large sunken black lesions, often oozing.</li>
+      <li>Ripening fruits: Grey to black slightly sunken lesions with pink-orange spore masses (Pitkethley & Conde, 2007).</li>
+    </ul>
+  </li>
+  <li><strong>Twigs and Shoots:</strong> Dark lesions under high humidity starting from shoot tips, potentially causing defoliation and latent infections (Pitkethley & Conde, 2007).</li>
+</ul>""",
+    treatment="""\
+<ul>
+  <li><strong>Cultural Control:</strong> Remove infected plant parts, prune for airflow, and avoid planting in damp areas (Paudel et al., 2022).</li>
+  <li><strong>Chemical Control:</strong> 
+    <ul>
+      <li>Mancozeb: Every 14 days from flowering to harvest.</li>
+      <li>Prochloraz: For green fruits with careful use to avoid resistance.</li>
+      <li>Copper-based fungicides: Effective and safe with only a 1-day withholding period (Pitkethley & Conde, 2007).</li>
+    </ul>
+  </li>
+  <li><strong>Postharvest Treatments:</strong> 
+    <ul>
+      <li>Hot water dip at 55°C for 5 minutes.</li>
+      <li>Cold prochloraz sprays and hot benomyl dips for storage protection (Pitkethley & Conde, 2007).</li>
+    </ul>
+  </li>
+  <li><strong>Eco-Friendly Options:</strong> 
+    <ul>
+      <li>CTS + IA edible coatings: Reduced lesions by 69.1% and preserved quality for 20 days (Li et al., 2024).</li>
+      <li>Other solutions: Essential oils (e.g., cinnamon, thyme), beneficial microbes like <em>Pseudomonas fluorescens</em> and <em>Candida membranifaciens</em>, and oxalic acid (Paudel et al., 2022).</li>
+    </ul>
+  </li>
+</ul>"""
 )
+
 
 pest2 =MangoPestDisease(
     slug="backterial-spots",
     name="Backterial-spots",
-    short_desc="White powder on leaves and flowers.",
-    image_url="images/powdery_mildew.jpg",
-    full_description="Caused by *Oidium mangiferae*, powdery mildew reduces fruit production.",
-    symptoms="White powdery substance on leaves, flowers and young fruits.",
-    treatment="Sulfur-based fungicides. Improve air circulation."
+    short_desc="A bacterial infection that causes black, cracked spots on mango leaves, fruit, and branches. It spreads through rain and tools, reducing fruit quality and yield.",
+    image_url="images/mango bactarial black spot leaf.jpg",
+    full_description=(
+        "Mango Bacterial Black Spot (MBBS) is caused by the bacterium *Xanthomonas campestris* pv. *mangiferaeindicae*. "
+        "It thrives during hot and rainy seasons and severely affects mango production, especially in susceptible "
+        "cultivars like 'Kate'. Under highly favorable conditions, infection rates may reach 50–80%, causing major "
+        "losses in both yield and fruit quality (Li et al., 2025).\n\n"
+        "The disease was first identified in Australia's Northern Territory in 1981 and has since spread across most "
+        "Top End mango regions. While damage is usually limited due to a dry fruiting season, unseasonal rain can cause "
+        "serious outbreaks (Pitkethley, 2006).\n\n"
+        "MBBS affects both external and internal plant health. It disrupts the microbial balance, increasing harmful "
+        "bacteria like *Pseudomonas*, *Burkholderia*, and *Diaporthe*, and decreasing beneficial microbes such as "
+        "*Penicillium*, *Fusarium*, and *Alternaria*. However, increases in beneficial bacteria like *Paenibacillus* "
+        "show promise for biological control (Li et al., 2025).\n\n"
+        "MBBS can be transmitted silently through infected seedlings or budwood, often without visible symptoms. It spreads "
+        "via wind-driven rain and contaminated tools, making prevention and monitoring essential."
+    ),
+    symptoms="""\
+<ul>
+  <li><strong>Leaves:</strong> Small water-soaked spots that turn black or brown and ulcerated, often angular due to vein boundaries. Severe cases lead to premature leaf drop (Pitkethley, 2006; Li et al., 2025).</li>
+  <li><strong>Fruits:</strong> Sunken black-brown spots with water-soaked edges and star-shaped cracks. Lesions may merge into large ulcerated areas, causing premature fruit drop.</li>
+  <li><strong>Twigs and Branches:</strong> Cracked black lesions that become long-term infection sources and may lead to branch dieback.</li>
+  <li><strong>Disease Spread:</strong> Wind-driven rain, wounds on the plant surface, and contaminated equipment are major pathways. Wind damage increases vulnerability. Windbreaks can reduce spread (Pitkethley, 2006).</li>
+</ul>""",
+    treatment="""\
+<ul>
+  <li><strong>Cultural Management:</strong> 
+    <ul>
+      <li>Remove infected plant parts and sterilize pruning tools.</li>
+      <li>Improve airflow through pruning and avoid waterlogged planting sites.</li>
+      <li>Use certified disease-free planting materials and establish windbreaks.</li>
+    </ul>
+  </li>
+  <li><strong>Chemical Control:</strong> 
+    <ul>
+      <li>Copper-based bactericides are widely used.</li>
+      <li>In the Northern Territory: 
+        <ul>
+          <li>Copper oxychloride (500 g/kg): 250 g per 100 L of water or 4 kg/ha.</li>
+          <li>Copper oxide (400 g/L): 300–400 mL per 100 L.</li>
+        </ul>
+      </li>
+      <li>Spray every four weeks from flowering to fruit set. Withholding period: 1 day (Pitkethley, 2006).</li>
+    </ul>
+  </li>
+  <li><strong>Biological Control:</strong> 
+    <ul>
+      <li>Beneficial microbes like <em>Paenibacillus</em>, <em>Bacillus subtilis</em>, and <em>Pseudomonas fluorescens</em> suppress the disease and support plant health.</li>
+      <li>MBBS triggers plant defense systems, including amino acid metabolism and energy transport, which may help long-term resistance (Li et al., 2025).</li>
+    </ul>
+  </li>
+</ul>"""
 )
 
 pest3 = MangoPestDisease(
