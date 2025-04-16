@@ -8,7 +8,7 @@ html, body {
     background: #f9f9f9;
 }
 
-/* Homepage background wrapper */
+/* Homepage background */
 .home-background {
     background: url("../images/mango home img.jpg") no-repeat center center fixed;
     background-size: cover;
