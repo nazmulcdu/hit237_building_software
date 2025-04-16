@@ -1,31 +1,19 @@
+{% extends "mango_pests/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Mango Pests and Diseases</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
-<body>
-    <nav>
-        <a href="{% url 'home' %}">Home</a> |
-        <a href="{% url 'pest_list' %}">Pest List</a> |
-        <a href="{% url 'about' %}">About</a>
-    </nav>
 
-    <h1>Mango Pests and Diseases</h1>
+{% block content %}
+<h1>Mango Pests and Diseases</h1>
 
-    <ul class="card-container">
-        {% for pest in pests %}
-        <li class="card">
-            <img src="{% static pest.image_url %}" alt="{{ pest.name }}">
-            <div class="card-content">
-                <h3><a href="{% url 'pest_detail' pest.slug %}">{{ pest.name }}</a></h3>
-                <p>{{ pest.short_desc }}</p>
-                <a href="{% url 'pest_detail' pest.slug %}" class="read-more">Learn More</a>
-            </div>
-        </li>
-        {% endfor %}
-    </ul>
-    
-</body>
-</html>
+<ul class="card-container">
+    {% for pest in pests %}
+    <li class="card">
+        <img src="{% static pest.image_url %}" alt="{{ pest.name }}">
+        <div class="card-content">
+            <h3><a href="{% url 'pest_detail' pest.slug %}">{{ pest.name }}</a></h3>
+            <p>{{ pest.short_desc }}</p>
+            <a href="{% url 'pest_detail' pest.slug %}" class="read-more">Learn More</a>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

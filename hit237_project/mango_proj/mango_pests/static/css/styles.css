@@ -2,40 +2,42 @@
 html, body {
     height: 100%;
     margin: 0;
-    padding: 0;
     font-family: 'Poppins', sans-serif;
-    color: #333;
-    background: #f9f9f9;
+    background-color: lightyellow;
 }
-
+nav h2{
+    color:#ffc324
+}
 /* Homepage background */
 .home-background {
     background: url("../images/mango home img.jpg") no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
-    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
-
-/* Home container (on top of background) */
+/* Home container */
 .home-container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
     padding: 2rem;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    background-color: rgba(255, 255, 255, 0); 
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(255,255,255,0);
 }
 
 .home-container h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #000000;
+    color: white;
 }
 
 .home-container p {
     font-size: 1.2rem;
-    color: #555;
+    color: whitesmoke;
 }
 
 .home-links {
@@ -78,14 +80,14 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     font-weight: bold;
-    color: white;
+    color: #ffc324
 }
 
 /* General container (used on other pages) */
 .container {
     width: 90%;
     margin: 40px auto;
-    background: white;
+    background-color: lightyellow;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -98,9 +100,6 @@ nav ul li a {
     min-height: 100vh;
 }
 
-.main-content {
-    flex: 1;
-}
 
 /* Buttons */
 button {
@@ -188,19 +187,36 @@ button:hover {
     background-color: #1b4332;
 }
 
-/* Footer */
-.footer {
-    background-color: #004d00;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 0.9rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 40px;
+.about-container {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    background-color: #fffef5;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.footer p {
-    margin: 0;
+.about-section, .team-section, .tech-section, .acknowledgments, .references-section {
+    margin-bottom: 2rem;
+}
+
+.about-container h2 {
+    margin-top: 1.5rem;
+    color: #346d31;
+}
+
+.team-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    
+    font-family:'Lucida Sans';
+    background-color: #004d00;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 10px 0;
+    width:100%;
 }
