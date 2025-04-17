@@ -16,14 +16,14 @@ pest1 = MangoPestDisease(
     full_description=(
         "Mango anthracnose is caused by the fungus *Colletotrichum gloeosporioides* "
         "(teleomorph: *Glomerella cingulata*), including its variant *C. gloeosporioides var. minor* "
-        "(Pitkethley & Conde, 2007). It is one of the most destructive mango diseases in tropical and "
+        "(Pitkethley & Conde 2007). It is one of the most destructive mango diseases in tropical and "
         "subtropical climates, affecting leaves, flowers, stems, and fruits. Yield losses typically range "
-        "from 30–60%, but can reach 100% under very humid or rainy conditions (Paudel et al., 2022).\n\n"
+        "from 30–60%, but can reach 100% under very humid or rainy conditions (Paudel et al. 2022).\n\n"
         "A unique risk of this disease is its latent infection capability. The fungus infects green fruits "
         "while still on the tree and remains dormant until ripening. Once activated, it causes rapid rotting, "
         "making postharvest control difficult. The fungus spreads via rain, wind, and irrigation and thrives "
         "in high humidity (≥95%) and temperatures between 25–30°C, especially during flowering and fruit "
-        "development (Paudel et al., 2022).\n\n"
+        "development (Paudel et al. 2022).\n\n"
         "Recent research by Li et al. (2024) explores eco-friendly control strategies, such as using edible "
         "coatings with Chitosan (CTS) and Iturin A (IA). These coatings inhibit fungal growth, enhance the "
         "fruit’s natural defences, and prolong shelf life by reducing lesion development by 69%, retaining "
@@ -31,36 +31,36 @@ pest1 = MangoPestDisease(
     ),
     symptoms="""\
 <ul>
-  <li><strong>Leaves:</strong> Tan to dark brown spots, especially near edges; semi-circular lesions on new flushes exposed to rain (Pitkethley & Conde, 2007; Paudel et al., 2022).</li>
-  <li><strong>Flowers (Panicles):</strong> Tiny black or brown spots, leading to poor fruit set and flower drop (Paudel et al., 2022).</li>
+  <li><strong>Leaves:</strong> Tan to dark brown spots, especially near edges; semi-circular lesions on new flushes exposed to rain (Pitkethley & Conde 2007; Paudel et al. 2022).</li>
+  <li><strong>Flowers (Panicles):</strong> Tiny black or brown spots, leading to poor fruit set and flower drop (Paudel et al. 2022).</li>
   <li><strong>Fruits:</strong> 
     <ul>
       <li>Young fruits: Large sunken black lesions, often oozing.</li>
-      <li>Ripening fruits: Grey to black slightly sunken lesions with pink-orange spore masses (Pitkethley & Conde, 2007).</li>
+      <li>Ripening fruits: Grey to black slightly sunken lesions with pink-orange spore masses (Pitkethley & Conde 2007).</li>
     </ul>
   </li>
-  <li><strong>Twigs and Shoots:</strong> Dark lesions under high humidity starting from shoot tips, potentially causing defoliation and latent infections (Pitkethley & Conde, 2007).</li>
+  <li><strong>Twigs and Shoots:</strong> Dark lesions under high humidity starting from shoot tips, potentially causing defoliation and latent infections (Pitkethley & Conde 2007).</li>
 </ul>""",
     treatment="""\
 <ul>
-  <li><strong>Cultural Control:</strong> Remove infected plant parts, prune for airflow, and avoid planting in damp areas (Paudel et al., 2022).</li>
+  <li><strong>Cultural Control:</strong> Remove infected plant parts, prune for airflow, and avoid planting in damp areas (Paudel et al. 2022).</li>
   <li><strong>Chemical Control:</strong> 
     <ul>
       <li>Mancozeb: Every 14 days from flowering to harvest.</li>
       <li>Prochloraz: For green fruits with careful use to avoid resistance.</li>
-      <li>Copper-based fungicides: Effective and safe with only a 1-day withholding period (Pitkethley & Conde, 2007).</li>
+      <li>Copper-based fungicides: Effective and safe with only a 1-day withholding period (Pitkethley & Conde 2007).</li>
     </ul>
   </li>
   <li><strong>Postharvest Treatments:</strong> 
     <ul>
       <li>Hot water dip at 55°C for 5 minutes.</li>
-      <li>Cold prochloraz sprays and hot benomyl dips for storage protection (Pitkethley & Conde, 2007).</li>
+      <li>Cold prochloraz sprays and hot benomyl dips for storage protection (Pitkethley & Conde 2007).</li>
     </ul>
   </li>
   <li><strong>Eco-Friendly Options:</strong> 
     <ul>
       <li>CTS + IA edible coatings: Reduced lesions by 69.1% and preserved quality for 20 days (Li et al., 2024).</li>
-      <li>Other solutions: Essential oils (e.g., cinnamon, thyme), beneficial microbes like <em>Pseudomonas fluorescens</em> and <em>Candida membranifaciens</em>, and oxalic acid (Paudel et al., 2022).</li>
+      <li>Other solutions: Essential oils (e.g., cinnamon, thyme), beneficial microbes like <em>Pseudomonas fluorescens</em> and <em>Candida membranifaciens</em>, and oxalic acid (Paudel et al. 2022).</li>
     </ul>
   </li>
 </ul>"""
@@ -71,12 +71,12 @@ pest2 =MangoPestDisease(
     slug="backterial-spots",
     name="Backterial-spots",
     short_desc="A bacterial infection that causes black, cracked spots on mango leaves, fruit, and branches. It spreads through rain and tools, reducing fruit quality and yield.",
-    image_url="images/mango bactarial black spot leaf.jpg",
+    image_url="images/mango bactarial black spot2.jpg",
     full_description=(
         "Mango Bacterial Black Spot (MBBS) is caused by the bacterium *Xanthomonas campestris* pv. *mangiferaeindicae*. "
         "It thrives during hot and rainy seasons and severely affects mango production, especially in susceptible "
         "cultivars like 'Kate'. Under highly favorable conditions, infection rates may reach 50–80%, causing major "
-        "losses in both yield and fruit quality (Li et al., 2025).\n\n"
+        "losses in both yield and fruit quality (Li et al. 2025).\n\n"
         "The disease was first identified in Australia's Northern Territory in 1981 and has since spread across most "
         "Top End mango regions. While damage is usually limited due to a dry fruiting season, unseasonal rain can cause "
         "serious outbreaks (Pitkethley, 2006).\n\n"
@@ -89,7 +89,7 @@ pest2 =MangoPestDisease(
     ),
     symptoms="""\
 <ul>
-  <li><strong>Leaves:</strong> Small water-soaked spots that turn black or brown and ulcerated, often angular due to vein boundaries. Severe cases lead to premature leaf drop (Pitkethley, 2006; Li et al., 2025).</li>
+  <li><strong>Leaves:</strong> Small water-soaked spots that turn black or brown and ulcerated, often angular due to vein boundaries. Severe cases lead to premature leaf drop (Pitkethley, 2006; Li et al. 2025).</li>
   <li><strong>Fruits:</strong> Sunken black-brown spots with water-soaked edges and star-shaped cracks. Lesions may merge into large ulcerated areas, causing premature fruit drop.</li>
   <li><strong>Twigs and Branches:</strong> Cracked black lesions that become long-term infection sources and may lead to branch dieback.</li>
   <li><strong>Disease Spread:</strong> Wind-driven rain, wounds on the plant surface, and contaminated equipment are major pathways. Wind damage increases vulnerability. Windbreaks can reduce spread (Pitkethley, 2006).</li>
