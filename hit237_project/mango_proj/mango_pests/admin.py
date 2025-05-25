@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Pest, Symptom, Treatment
+from .models import Pest, Symptom, Treatment,PestReport
 
 # Registering Pest model
 @admin.register(Pest)
@@ -21,3 +21,8 @@ class TreatmentAdmin(admin.ModelAdmin):
     list_display = ('pest', 'name', 'is_organic')
     search_fields = ('pest__name', 'name')
     list_filter = ('is_organic', 'pest')
+
+@admin.register(PestReport)
+class PestReportAdmin(admin.ModelAdmin):
+    list_display = ('full_name', 'pest_name', 'location', 'submitted_at')
+    search_fields = ('full_name', 'pest_name', 'location')

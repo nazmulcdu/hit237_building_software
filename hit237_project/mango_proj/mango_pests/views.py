@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect,get_object_or_404
 from .pest_data import mango_pestdiseases
+from .forms import PestReportForm
 
 def home(request):
     return render(request, 'mango_pests/home.html')
@@ -21,3 +22,31 @@ def pest_list_view(request):
 
 def preventive_tips(request):
     return render(request, 'mango_pests/preventive_tips.html')
+
+def report_pest(request):
+    if request.method == 'POST':
+        form = PestReportForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return render(request, 'mango_pests/confirmation.html')
+    else:
+        form = PestReportForm()
+    return render(request, 'mango_pests/userform.html', {'form': form})
+
+def report_edit(request, pk):
+    report = get_object_or_404(PestReportForm, pk=pk)
+    if request.method == 'POST':
+        form = PestReportForm(request.POST, instance=report)
+        if form.is_valid():
+            form.save()
+            return redirect('report_list')  # You can define this view later
+    else:
+        form = PestReportForm(instance=report)
+    return render(request, 'mango_pests/userform.html', {'form': form})
+
+def report_delete(request, pk):
+    report = get_object_or_404(PestReportForm, pk=pk)
+    if request.method == 'POST':
+        report.delete()
+        return redirect('report_list')
+    return render(request, 'mango_pests/report_confirm_delete.html', {'report': report})
