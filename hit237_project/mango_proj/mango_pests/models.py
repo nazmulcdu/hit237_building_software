@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.utils import timezone
 
 class Pest(models.Model):
     name = models.CharField(max_length=200)
@@ -34,9 +35,16 @@ class Treatment(models.Model):
 class PestReport(models.Model):
     full_name = models.CharField(max_length=100)
     email = models.EmailField()
+    phone_number = models.CharField(max_length= 20, default='')
     location = models.CharField(max_length=200)
+    land_size = models.CharField(max_length= 70, default='')
     pest_name = models.CharField(max_length=100)
+    date_of_observation = models.DateField(default=timezone.now)
     observation = models.TextField()
+    severity_level = models.CharField(max_length= 8, choices= [('Low','Low'), ('Medium','Medium'), ('High','High')], default='Low')
+    affected_stage= models.CharField(choices=[('Seedling','Seedling'), ('Vegatative','Vegatative'), ('Budding','Budding'), ('Flowering','Flowering'), ('Fruiting','Fruiting'), ('Maturity','Maturity'), ('Harvest','Harvest')], default='Seedling')
+    affected_farm_area= models.CharField(max_length=150, default='')
+    symptoms= models.CharField(max_length=250, default='')
     image = models.ImageField(upload_to='pests/images/',blank=True)
     submitted_at = models.DateTimeField(auto_now_add=True)
 
