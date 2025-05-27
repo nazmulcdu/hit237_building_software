@@ -15,38 +15,63 @@ class Pest(models.Model):
     def get_absolute_url(self):
         return reverse('pest_detail', args=[str(self.id)])
 
-class Symptom(models.Model):
-    pest = models.ForeignKey(Pest, on_delete=models.CASCADE, related_name='symptoms')
-    description = models.TextField()
-    affected_part = models.CharField(max_length=100)
-    
-    def __str__(self):
-        return f"{self.pest.name} - {self.affected_part}"
-
-class Treatment(models.Model):
-    pest = models.ForeignKey(Pest, on_delete=models.CASCADE, related_name='treatments')
-    name = models.CharField(max_length=200)
-    description = models.TextField()
-    is_organic = models.BooleanField(default=False)
-    
-    def __str__(self):
-        return f"{self.pest.name} - {self.name}"
-
-class PestReport(models.Model):
+class Farmer(models.Model):
     full_name = models.CharField(max_length=100)
     email = models.EmailField()
-    phone_number = models.CharField(max_length= 20, default='')
+    phone_number = models.CharField(max_length=20, default='')
     location = models.CharField(max_length=200)
-    land_size = models.CharField(max_length= 70, default='')
+    land_size = models.CharField(max_length=70, default='')
+
+    def __str__(self):
+        return f"{self.full_name} - {self.location}"
+
+class PestReport(models.Model):
+    farmer = models.ForeignKey(Farmer, on_delete=models.CASCADE, null=True)
     pest_name = models.CharField(max_length=100)
     date_of_observation = models.DateField(default=timezone.now)
     observation = models.TextField()
-    severity_level = models.CharField(max_length= 8, choices= [('Low','Low'), ('Medium','Medium'), ('High','High')], default='Low')
-    affected_stage= models.CharField(choices=[('Seedling','Seedling'), ('Vegatative','Vegatative'), ('Budding','Budding'), ('Flowering','Flowering'), ('Fruiting','Fruiting'), ('Maturity','Maturity'), ('Harvest','Harvest')], default='Seedling')
-    affected_farm_area= models.CharField(max_length=150, default='')
-    symptoms= models.CharField(max_length=250, default='')
-    image = models.ImageField(upload_to='pests/images/',blank=True)
+    severity_level = models.CharField(
+        max_length=8,
+        choices=[('Low','Low'), ('Medium','Medium'), ('High','High')],
+        default='Low'
+    )
+    affected_stage = models.CharField(
+        max_length=20,
+        choices=[
+            ('Seedling','Seedling'), ('Vegatative','Vegatative'), ('Budding','Budding'),
+            ('Flowering','Flowering'), ('Fruiting','Fruiting'), ('Maturity','Maturity'), ('Harvest','Harvest')
+        ],
+        default='Seedling'
+    )
+    affected_farm_area = models.CharField(max_length=150, default='')
+    symptoms = models.CharField(max_length=250, default='')
+    image = models.ImageField(upload_to='pests/images/', blank=True)
     submitted_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.full_name} - {self.pest_name}"
+        return f"{self.pest_name} - {self.farmer.full_name}"
+
+class Treatment(models.Model):
+    TREATMENT_TYPE_CHOICES = [
+        ('Organic', 'Organic'),
+        ('Chemical', 'Chemical'),
+        ('Biological', 'Biological'),
+        ('Mechanical', 'Mechanical'),
+    ]
+
+    APPLICATION_METHOD_CHOICES = [
+        ('Spray', 'Spray'),
+        ('Soil drench', 'Soil drench'),
+        ('Injection', 'Injection'),
+        ('Manual removal', 'Manual removal'),
+    ]
+
+    pest = models.ForeignKey(Pest, on_delete=models.CASCADE, related_name='treatments')
+    treatment_type = models.CharField(max_length=50, choices=TREATMENT_TYPE_CHOICES, default='Organic')
+    product_name = models.CharField(max_length=200)
+    application_method = models.CharField(max_length=50, choices=APPLICATION_METHOD_CHOICES, default='Spray')
+    application_date = models.DateField(default=timezone.now)
+    is_organic = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.pest.pest_name} - {self.name}"

@@ -1,11 +1,74 @@
 {% extends "mango_pests/base.html" %}
 {% block content %}
 <div class="container">
-    <h2>Report a Mango Pest</h2>
-    <form method="post" enctype="multipart/form-data" >
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Submit</button>
-    </form>
+    <div class="form-intro">
+        <h2>Help Protect Mango Farming in the NT</h2>
+        <p>
+            Your input is valuable! By reporting pests or diseases on your mango farm, you are contributing 
+            to the health of the Northern Territory's agriculture. This data helps researchers and advisors 
+            identify trends and respond faster to issues affecting mango crops.
+        </p>
+        <h4>How to Fill This Form:</h4>
+        <ul>
+            <li>Provide accurate details about your farm and plant condition</li>
+            <li>Attach a photo if possible to help identify the issue</li>
+            <li>Submit the form once completed — it takes just 2 minutes!</li>
+        </ul>
+    </div>
+
+    <div class="form-wrapper">
+        <form id="pestForm" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <!-- Step 1 -->
+            <div id="form-step-1">
+                <h4>Step 1: Farmer & Farm Information</h4>
+                {{ farmer_form.as_p }}
+                <button type="button" id="nextToStep2">Next</button>
+            </div>
+
+            <!-- Step 2 -->
+            <div id="form-step-2" style="display:none;">
+                <h4>Step 2: Pest Observation Details</h4>
+                {{ pest_form.as_p }}
+                <button type="button" id="backToStep1">Back</button>
+                <button type="button" id="nextToStep3">Next</button>
+            </div>
+
+            <!-- Step 3 -->
+            <div id="form-step-3" style="display:none;">
+                <h4>Step 3: Treatment Information</h4>
+                {{ treatment_form.as_p }}
+                <button type="button" id="backToStep2">Back</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
 </div>
+
+<script>
+    const step1 = document.getElementById("form-step-1");
+    const step2 = document.getElementById("form-step-2");
+    const step3 = document.getElementById("form-step-3");
+
+    document.getElementById("nextToStep2").addEventListener("click", function () {
+        step1.style.display = "none";
+        step2.style.display = "block";
+    });
+
+    document.getElementById("backToStep1").addEventListener("click", function () {
+        step2.style.display = "none";
+        step1.style.display = "block";
+    });
+
+    document.getElementById("nextToStep3").addEventListener("click", function () {
+        step2.style.display = "none";
+        step3.style.display = "block";
+    });
+
+    document.getElementById("backToStep2").addEventListener("click", function () {
+        step3.style.display = "none";
+        step2.style.display = "block";
+    });
+</script>
 {% endblock %}

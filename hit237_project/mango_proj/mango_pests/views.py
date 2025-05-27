@@ -1,9 +1,10 @@
-from django.shortcuts import render,redirect,get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib.auth.views import LogoutView
 from .pest_data import mango_pestdiseases
-from .forms import PestReportForm
+from .forms import FarmerFarmForm, PestDetailsForm, TreatmentForm
+from .models import Farmer, Pest, Treatment
 
 def home(request):
     return render(request, 'mango_pests/home.html')
@@ -28,31 +29,31 @@ def preventive_tips(request):
 
 def report_pest(request):
     if request.method == 'POST':
-        form = PestReportForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
+        farmer_form = FarmerFarmForm(request.POST)
+        pest_form = PestDetailsForm(request.POST, request.FILES)
+        treatment_form = TreatmentForm(request.POST)
+
+        if farmer_form.is_valid() and pest_form.is_valid() and treatment_form.is_valid():
+            farmer = farmer_form.save()
+            pest = pest_form.save(commit=False)
+            pest.farmer = farmer
+            pest.save()
+
+            treatment = treatment_form.save(commit=False)
+            treatment.pest = pest
+            treatment.save()
+
             return render(request, 'mango_pests/confirmation.html')
     else:
-        form = PestReportForm()
-    return render(request, 'mango_pests/userform.html', {'form': form})
+        farmer_form = FarmerFarmForm()
+        pest_form = PestDetailsForm()
+        treatment_form = TreatmentForm()
 
-def report_edit(request, pk):
-    report = get_object_or_404(PestReportForm, pk=pk)
-    if request.method == 'POST':
-        form = PestReportForm(request.POST, instance=report)
-        if form.is_valid():
-            form.save()
-            return redirect('report_list')  # You can define this view later
-    else:
-        form = PestReportForm(instance=report)
-    return render(request, 'mango_pests/userform.html', {'form': form})
-
-def report_delete(request, pk):
-    report = get_object_or_404(PestReportForm, pk=pk)
-    if request.method == 'POST':
-        report.delete()
-        return redirect('report_list')
-    return render(request, 'mango_pests/report_confirm_delete.html', {'report': report})
+    return render(request, 'mango_pests/userform.html', {
+        'farmer_form': farmer_form,
+        'pest_form': pest_form,
+        'treatment_form': treatment_form,
+    })
 
 def signup_view(request):
     if request.method == 'POST':
@@ -60,7 +61,7 @@ def signup_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('home')  # or 'pest_list'
+            return redirect('home')
     else:
         form = UserCreationForm()
     return render(request, 'mango_pests/signup.html', {'form': form})
