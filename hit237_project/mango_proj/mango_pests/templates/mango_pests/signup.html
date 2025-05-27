@@ -1,0 +1,87 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            background-image: url("{% static 'images/mango home img.jpg' %}") ;
+             background-repeat: no-repeat;
+            background-position: center ;
+            background-attachment:fixed;
+            background-size:cover;
+
+        }
+        .signup-container {
+            background-color: rgba(255, 255, 255, 0.85);
+            width: 400px;
+            margin: 80px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+        }
+        .signup-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .signup-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .signup-container form input {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #999;
+        }
+        .signup-container form button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+    <header>
+        <nav class="navbar">
+            <h2> Mango Pests and Diseases Information Website</h2>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'pest_list' %}">Pest List</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'report_pest' %}">Form</a></li>
+              {% if user.is_authenticated %}
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                    <button type="submit">Logout</button>
+             </form>
+              {% else %}
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'signup' %}">Sign Up</a></li>
+               {% endif %}
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="signup-container">
+        <h2>Create an Account</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Mango Research. All rights reserved.</p>
+    </footer>
+</body>
+</html>

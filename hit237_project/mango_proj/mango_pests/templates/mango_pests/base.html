@@ -16,6 +16,16 @@
                 <li><a href="{% url 'pest_list' %}">Pest List</a></li>
                 <li><a href="{% url 'about' %}">About</a></li>
                 <li><a href="{% url 'report_pest' %}">Form</a></li>
+              {% if user.is_authenticated %}
+                    <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                            <button type="submit">Logout</button>
+                    </form>
+              {% else %}
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'signup' %}">Sign Up</a></li>
+               {% endif %}
+
             </ul>
         </nav>
     </header>
@@ -24,6 +34,8 @@
         {% block content %}
         {% endblock %}
     </main>
+
+    
 
     <footer class="footer">
         <p>&copy; 2025 Mango Research. All rights reserved.</p>
