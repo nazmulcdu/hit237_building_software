@@ -1,12 +1,14 @@
 {% extends "mango_pests/base.html" %}
 {% block content %}
+
 <div class="home-background">
-    <div class="home-container">
+    <div class="login-container">
         <h1>Login</h1>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">Login</button>
+        <h3> Don't have an account? <a href="{% url 'signup' %}">Register</a> </h3>
         </form>
     </div>
 </div>
