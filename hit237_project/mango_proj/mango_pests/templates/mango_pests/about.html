@@ -2,54 +2,57 @@
 {% load static %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'mango_pests/css/about.css' %}">
+<script defer src="{% static 'mango_pests/js/about.js' %}"></script>
+
 <div class="about-container">
     <section class="about-section">
         <h1>About This Website</h1>
-        <p>This website shares key information about mango pests and diseases.</p>
+        <p>This website provides critical and reliable information on pests and diseases that affect mango crops. Our goal is to support farmers, students, and researchers with accurate, easy-to-understand content.</p>
+    </section>
+
+    <section class="benefits-section">
+        <h2>Why Use Our Website?</h2>
+        <ul>
+            <li>✔️ Accurate information based on scientific and government sources</li>
+            <li>✔️ Easy navigation and responsive design</li>
+            <li>✔️ Visual identification guides for each pest/disease</li>
+            <li>✔️ Centralised knowledge to support effective pest management</li>
+        </ul>
+    </section>
+
+    <section class="purpose-section">
+        <h2>Our Purpose</h2>
+        <p>We aim to raise awareness and provide educational support to mango growers and students. Through digital cards, life cycle visuals, and control strategies, users can quickly identify and respond to threats in mango production.</p>
+    </section>
+
+    <section class="offer-section">
+        <h2>What We Offer</h2>
+        <ul>
+            <li>📚 A searchable list of pests and diseases</li>
+            <li>🕷️ Detailed life cycles and symptoms</li>
+            <li>🧪 Biological and chemical control methods</li>
+            <li>🛠️ Tools for learning and prevention</li>
+        </ul>
     </section>
 
     <section class="team-section">
-        <h2>Meet the Team</h2>
-        <ul class="team-list">
-            <li><strong>Sohom Sarker</strong> Student ID: s372399</li>
-            <li><strong>Nazmul Hasan</strong> Student ID: s379797</li>
-            <li><strong>Ayesha Akter</strong> Student ID: s379450</li>
-            <li><strong>Elsdon Putukkeril</strong> Student ID: s381406</li>
+        <h2 onclick="toggleSection(this)">Meet the Team ⬇️</h2>
+        <ul class="team-list hidden">
+            <li><strong>Sohom Sarker</strong> — Student ID: s372399</li>
+            <li><strong>Nazmul Hasan</strong> — Student ID: s379797</li>
+            <li><strong>Ayesha Akter</strong> — Student ID: s379450</li>
+            <li><strong>Elsdon Putukkeril</strong> — Student ID: s381406</li>
         </ul>
     </section>
 
     <section class="tech-section">
-        <h2>Technologies Used:</h2>
-        <ul>
-            <li>Django Framework (Python)</li>
-            <li>HTML, CSS</li>
-            <li> Google</li>
-            
+        <h2 onclick="toggleSection(this)">Technologies Used ⬇️</h2>
+        <ul class="tech-list hidden">
+            <li>🌐 Django Framework (Python)</li>
+            <li>🎨 HTML, CSS & JavaScript</li>
+            <li>🔍 Research from government and academic sources</li>
         </ul>
-    </section>
-
-    <section class="references-section">
-        <h2>References</h2>
-        <ul>
-            <li>Li, Y., Zhang, T. & Chen, L. 2025, ‘Microbial shifts and biocontrol potential during mango bacterial black spot infection’, <i>Plant Disease Management Journal</i>, vol. 18, no. 2, pp. 98–112.</li>
-            <li>Li, Y., Zhang, T. & Chen, L. 2024, ‘Biocontrol of mango anthracnose using chitosan-based coatings’, <i>Journal of Horticultural Research</i>, vol. 32, no. 1, pp. 55–67.</li>
-            <li>Paudel, D.R., Gurung, S. & Karki, R. 2022, ‘Management of postharvest mango diseases in humid climates’, <i>International Journal of Tropical Agriculture</i>, vol. 40, no. 3, pp. 101–110.</li>
-            <li>Pitkethley, J. 2006, <i>Managing mango bacterial black spot in Northern Territory orchards</i>, Technical Bulletin no. 295, NT Primary Industry & Resources, Darwin, Australia.</li>
-            <li>Pitkethley, J. & Conde, B. 2007, <i>Mango pest and disease guide: Anthracnose and other major threats</i>, Northern Territory Government Publications, Darwin.</li>
-            <li>Peng, R.K. & Christian, K. 2005, ‘Integrated pest management in mango orchards in the Northern Territory Australia, using the weaver ant, <i>Oecophylla smaragdina</i>, (Hymenoptera: Formicidae) as a key element’, <i>International Journal of Pest Management</i>, vol. 51, no. 2, pp. 149–155.</li>
-            <li>Conde, B.D., Pitkethley, R.N., Smith, E.S.C. & Kulkarni, V.J. 2007, <i>Mango Scab and its Control</i>, Technical Bulletin no. I33, Diagnostic Services, Biosecurity and Product Integrity, Crops, Forestry and Horticulture, Darwin, Australia.</li>
-            <li>Weinert, M., Holmes, R., Wittenberg, L., Pinese, B., Freebairn, C., Chin, D., Bally, I., Buschkens, D. & Neal, M. n.d., <i>Delivering Mango Technology: Mango Seed Weevil – Life Cycle and Control Options</i>, Northern Territory Government, Darwin, Australia.</li>
-            <li>Reddy, P.V., Gundappa, B. & Chakravarthy, A.K. 2018, ‘Pests and their management’, in Omkar (ed.), <i>Pests and Their Management</i>, Springer Nature Singapore Pte Ltd., Singapore, viewed 16 April 2025, <a href="https://doi.org/10.1007/978-981-10-8687-8_12" target="_blank">https://doi.org/10.1007/978-981-10-8687-8_12</a>.</li>
-            <li>Farmonaut 2024, ‘Aphids unveiled: from mango pests to hairy species’, <i>Farmonaut</i>, viewed 16 April 2025, <a href="https://farmonaut.com/precision-farming/aphids-unveiled-from-mango-pests-to-hairy-species-essential-guide-for-farmers/" target="_blank">https://farmonaut.com/precision-farming/aphids-unveiled-from-mango-pests-to-hairy-species-essential-guide-for-farmers/</a>.</li>
-            <li>Smith, E.S.C. & Brown, H. 2014, <i>Plant Industries</i>, no. I48, NT Department of Primary Industry and Fisheries, Darwin.</li>
-            <li>Education.com n.d., <i>Fruit Fly Life Cycle</i>, viewed 16 April 2025, <a href="https://www.education.com/science-fair/article/drosophila-metamorphosis/" target="_blank">https://www.education.com/science-fair/article/drosophila-metamorphosis/</a>.</li>
-            <li>Raphael, K.A., Shearman, D.C., Gilchrist, A.S., Sved, J.A., Morrow, J.L., Sherwin, W.B., Riegler, M. & Frommer, M. 2014, ‘Australian endemic pest tephritids: genetic, molecular and microbial tools for improved Sterile Insect Technique’, <i>BMC Genomic Data</i>, vol. 15, Suppl. 2.</li>
-            <li>Smith, E.S.C. & Brown, H. 2014, <i>Fruit Flies in the Home Garden</i>, viewed 16 April 2025, <a href="https://daf.nt.gov.au/__data/assets/pdf_file/0003/232914/425.pdf" target="_blank">https://daf.nt.gov.au/__data/assets/pdf_file/0003/232914/425.pdf</a>.</li>
-            <li>Northern Territory Government n.d., <i>Managing Mango Scale</i>, viewed 16 April 2025, <a href="https://daf.nt.gov.au/__data/assets/pdf_file/0018/228015/mango_scale_management_poster.pdf" target="_blank">https://daf.nt.gov.au/__data/assets/pdf_file/0018/228015/mango_scale_management_poster.pdf</a>.</li>
-            <li>Northern Territory Government 2010, <i>Pests, Beneficials, Diseases and Disorders of Mangoes</i>, viewed 16 April 2025, <a href="https://dpir.nt.gov.au/__data/assets/pdf_file/0006/227832/mango_field_guide.pdf" target="_blank">https://dpir.nt.gov.au/__data/assets/pdf_file/0006/227832/mango_field_guide.pdf</a>.</li>
-            <li>Owen, A. 2016, ‘Mango Scale and Pink Wax Scale IPM in the Burdekin’, viewed 16 April 2025, <a href="https://blackearth.com.au/mango-scale-pink-wax-scale-ipm-burdekin/" target="_blank">https://blackearth.com.au/mango-scale-pink-wax-scale-ipm-burdekin/</a>.</li>
-        </ul>
-        
     </section>
 </div>
 {% endblock %}
