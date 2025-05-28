@@ -2,6 +2,9 @@ from django.urls import path, re_path
 from . import views
 from django.contrib.auth import views as auth_views
 from .views import CustomLogoutView
+from .views import PestReportListView
+from .views import PestReportUpdateView
+from .views import PestReportDeleteView
 
 urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='mango_pests/login.html'), name='login'),
@@ -16,5 +19,7 @@ urlpatterns = [
     path('preventive-tips/', views.preventive_tips, name='preventive_tips'),
     #path('report/<int:pk>/edit/', views.report_edit, name='report_edit'),
     #path('report/<int:pk>/delete/', views.report_delete, name='report_delete'),
-    
+    path('pestreports/', PestReportListView.as_view(), name='pestreport_list'),
+    path('pestreports/<int:pk>/edit/', PestReportUpdateView.as_view(), name='pestreport_edit'),
+    path('pestreports/<int:pk>/delete/', views.PestReportDeleteView.as_view(), name='pestreport_delete'),
 ]

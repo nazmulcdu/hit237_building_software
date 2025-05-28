@@ -5,6 +5,9 @@ from django.contrib.auth.views import LogoutView
 from .pest_data import mango_pestdiseases
 from .forms import FarmerFarmForm, PestDetailsForm, TreatmentForm
 from .models import Farmer, Pest, Treatment
+from django.urls import reverse_lazy
+from django.views.generic import (ListView, UpdateView, DeleteView)
+
 
 def home(request):
     return render(request, 'mango_pests/home.html')
@@ -68,7 +71,21 @@ def signup_view(request):
 class CustomLogoutView(LogoutView):
     def get(self, request, *args, **kwargs):
         return self.post(request, *args, **kwargs)
+    
+class PestReportListView(ListView):
+    model = PestReport
+    template_name = 'mango_pests/list.html'
+    context_object_name = 'pestreports'
 
+class PestReportUpdateView(UpdateView):
+        model = PestReport
+        template_name = 'mango_pests/edit.html'
+        fields = ['pest_name', 'affected_stage', 'observation', 'date_of_observation', 'farmer']
+        success_url = reverse_lazy('pestreport_list')
 
+class PestReportDeleteView(DeleteView):
+    model = PestReport
+    template_name = 'mango_pests/delete.html'
+    success_url = reverse_lazy('pestreport_list')
 
 
