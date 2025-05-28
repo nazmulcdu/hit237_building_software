@@ -23,10 +23,10 @@ class Farmer(models.Model):
     land_size = models.CharField(max_length=70, default='')
 
     def __str__(self):
-        return f"{self.full_name} - {self.location}"
+        return f"{self.full_name} ({self.location})"
 
 class PestReport(models.Model):
-    farmer = models.ForeignKey(Farmer, on_delete=models.CASCADE, null=True)
+    farmer = models.ForeignKey(Farmer, on_delete=models.CASCADE, related_name='pest_reports', default=1)
     pest_name = models.CharField(max_length=100)
     date_of_observation = models.DateField(default=timezone.now)
     observation = models.TextField()
@@ -37,19 +37,14 @@ class PestReport(models.Model):
     )
     affected_stage = models.CharField(
         max_length=20,
-        choices=[
-            ('Seedling','Seedling'), ('Vegatative','Vegatative'), ('Budding','Budding'),
-            ('Flowering','Flowering'), ('Fruiting','Fruiting'), ('Maturity','Maturity'), ('Harvest','Harvest')
-        ],
-        default='Seedling'
-    )
+        choices=[('Seedling','Seedling'), ('Vegetative','Vegetative'), ('Budding','Budding'),('Flowering','Flowering'), ('Fruiting','Fruiting'), ('Maturity','Maturity'), ('Harvest','Harvest')],default='Seedling')
     affected_farm_area = models.CharField(max_length=150, default='')
     symptoms = models.CharField(max_length=250, default='')
-    image = models.ImageField(upload_to='pests/images/', blank=True)
+    image = models.ImageField(upload_to='pests/images/', blank=True, null=True)  # Make image optional
     submitted_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.pest_name} - {self.farmer.full_name}"
+        return f"{self.pest_name} - {self.farmer} (Severity: {self.severity_level})"
 
 class Treatment(models.Model):
     TREATMENT_TYPE_CHOICES = [
@@ -74,5 +69,6 @@ class Treatment(models.Model):
     is_organic = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"{self.pest_report.pest_name} - {self.product_name}"
+        return f"{self.product_name} for {self.pest_report.pest_name}"
+
 
