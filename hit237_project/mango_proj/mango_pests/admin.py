@@ -22,6 +22,7 @@ class PestReportAdmin(admin.ModelAdmin):
 
 @admin.register(Treatment)
 class TreatmentAdmin(admin.ModelAdmin):
-    list_display = ('pest', 'product_name', 'treatment_type', 'application_method', 'application_date', 'is_organic')
-    search_fields = ('pest__pest_name', 'name')
+    list_display = ('pest_report', 'product_name', 'treatment_type', 'application_method', 'application_date', 'is_organic')
+    search_fields = ('pest_report__pest_name', 'product_name')
     list_filter = ('treatment_type', 'application_method', 'is_organic', 'application_date')
+

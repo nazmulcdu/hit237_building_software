@@ -1,18 +1,26 @@
 {% extends "mango_pests/base.html" %}
 {% block content %}
-<div class="container">
-    <div class="form-intro">
-        <h2>Help Protect Mango Farming in the NT</h2>
+<div class="container intro">
+    <div class="faq-header">
+        <h1>Help Protect Mango Farming in the NT</h1>
         <p>
             Your input is valuable! By reporting pests or diseases on your mango farm, you are contributing 
             to the health of the Northern Territory's agriculture. This data helps researchers and advisors 
             identify trends and respond faster to issues affecting mango crops.
         </p>
-        <h4>How to Fill This Form:</h4>
+    </div>
+
+    <div class="faq-item">
+        <h3>How to Fill This Form:</h3>
         <ul>
             <li>Provide accurate details about your farm and plant condition</li>
             <li>Attach a photo if possible to help identify the issue</li>
-            <li>Submit the form once completed — it takes just 2 minutes!</li>
+            <li>Submit the form once completed — it takes just <strong>2 minutes!</strong></li>
+            <li>Use the latest observation date to improve data accuracy</li>
+            <li>If you're unsure about any pest or disease, describe the symptoms in detail</li>
+            <li>Each submission helps build a clearer map of mango health across <strong>NT</strong> regions</li>
+            <li>This data supports early warning systems and agricultural planning</li>
+            <li>We recommend submitting a report at least <strong>once every two weeks</strong> during the growing season, or immediately when any new pest or disease is observed.</li>
         </ul>
     </div>
 
@@ -22,14 +30,14 @@
 
             <!-- Step 1 -->
             <div id="form-step-1">
-                <h4>Step 1: Farmer & Farm Information</h4>
+                <h4>Farmer & Farm Information</h4>
                 {{ farmer_form.as_p }}
                 <button type="button" id="nextToStep2">Next</button>
             </div>
 
             <!-- Step 2 -->
             <div id="form-step-2" style="display:none;">
-                <h4>Step 2: Pest Observation Details</h4>
+                <h4>Pest Observation Details</h4>
                 {{ pest_form.as_p }}
                 <button type="button" id="backToStep1">Back</button>
                 <button type="button" id="nextToStep3">Next</button>
@@ -37,7 +45,7 @@
 
             <!-- Step 3 -->
             <div id="form-step-3" style="display:none;">
-                <h4>Step 3: Treatment Information</h4>
+                <h4>Treatment Information</h4>
                 {{ treatment_form.as_p }}
                 <button type="button" id="backToStep2">Back</button>
                 <button type="submit">Submit</button>
@@ -45,7 +53,7 @@
         </form>
     </div>
 </div>
-
+<!---->
 <script>
     const step1 = document.getElementById("form-step-1");
     const step2 = document.getElementById("form-step-2");

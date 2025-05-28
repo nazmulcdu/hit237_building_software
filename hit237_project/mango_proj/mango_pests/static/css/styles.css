@@ -286,29 +286,56 @@ footer {
 }
 
 /* Form */
-/* ---------- Intro Section ---------- */
-.form-intro {
-    background-color: #fffde7;
-    border-left: 6px solid #2d6a4f;
-    padding: 25px 30px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+.intro {
+
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.form-intro h2 {
-    color: #2d6a4f;
-    margin-bottom: 15px;
+/* Header Section */
+.faq-header {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  text-align: center;
 }
 
-.form-intro h4 {
-    color: #40916c;
-    margin-top: 20px;
+.faq-header h1 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-.form-intro ul {
-    padding-left: 20px;
-    color: #444;
+.faq-header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Instruction Card */
+.faq-item {
+  background-color: #ffffff;
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto 25px;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+.faq-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #2d6a4f;
+}
+
+.faq-item ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.faq-item li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
 }
 
 /* ---------- Form Wrapper ---------- */

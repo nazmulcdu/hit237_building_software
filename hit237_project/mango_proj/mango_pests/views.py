@@ -40,7 +40,7 @@ def report_pest(request):
             pest.save()
 
             treatment = treatment_form.save(commit=False)
-            treatment.pest = pest
+            treatment.pest_report = pest
             treatment.save()
 
             return render(request, 'mango_pests/confirmation.html')

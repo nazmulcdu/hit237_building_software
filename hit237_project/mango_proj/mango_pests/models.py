@@ -66,7 +66,7 @@ class Treatment(models.Model):
         ('Manual removal', 'Manual removal'),
     ]
 
-    pest = models.ForeignKey(Pest, on_delete=models.CASCADE, related_name='treatments')
+    pest_report = models.ForeignKey(PestReport, on_delete=models.CASCADE, related_name='treatments', null=True, blank=True)
     treatment_type = models.CharField(max_length=50, choices=TREATMENT_TYPE_CHOICES, default='Organic')
     product_name = models.CharField(max_length=200)
     application_method = models.CharField(max_length=50, choices=APPLICATION_METHOD_CHOICES, default='Spray')
@@ -74,4 +74,5 @@ class Treatment(models.Model):
     is_organic = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"{self.pest.pest_name} - {self.name}"
+        return f"{self.pest_report.pest_name} - {self.product_name}"
+
