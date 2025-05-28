@@ -2,15 +2,32 @@
 {% load static %}
 
 {% block content %}
-<h1>{{ pest.name }}</h1>
-<img src="{% static pest.image_url %}" alt="{{ pest.name }}" width="300">
+<div class="container intro">
 
-<h3>Full Description</h3>
-<p>{{ pest.full_description }}</p>
+  <div class="faq-header">
+    <h1>{{ pest.name }}</h1>
+    <p>A detailed overview of symptoms, treatment, and description of the selected pest or disease affecting mango farms.</p>
+  </div>
 
-<h3>Symptoms</h3>
-<p>{{ pest.symptoms|safe }}</p>
+  <div class="pest-image-container">
+    <img class="pest-image" src="{% static pest.image_url %}" alt="{{ pest.name }}">
+  </div>
 
-<h3>Treatment</h3>
-<p>{{ pest.treatment|safe }}</p>
+
+  <div class="faq-item">
+    <h3>Full Description</h3>
+    <p>{{ pest.full_description }}</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Symptoms</h3>
+    <p>{{ pest.symptoms|safe }}</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Treatment</h3>
+    <p>{{ pest.treatment|safe }}</p>
+  </div>
+
+</div>
 {% endblock %}

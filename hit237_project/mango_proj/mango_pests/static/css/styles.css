@@ -273,6 +273,23 @@ button:hover {
     margin-bottom: 0.5rem;
 }
 
+.pest-image-container {
+    text-align: center;
+    margin: 0 auto 30px;
+    max-width: 900px;
+}
+
+.pest-image {
+    width: 100%;
+    max-width: 850px;
+    aspect-ratio: 16 / 9; /* Enforces a wide format */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
 /* Footer */
 footer {
     
