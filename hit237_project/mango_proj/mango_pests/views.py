@@ -59,9 +59,8 @@ def signup_view(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            login(request, user)
-            return redirect('home')
+            form.save()
+            return redirect('login')
     else:
         form = UserCreationForm()
     return render(request, 'mango_pests/signup.html', {'form': form})
@@ -69,3 +68,7 @@ def signup_view(request):
 class CustomLogoutView(LogoutView):
     def get(self, request, *args, **kwargs):
         return self.post(request, *args, **kwargs)
+
+
+
+

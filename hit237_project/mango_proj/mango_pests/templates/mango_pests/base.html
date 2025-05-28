@@ -9,26 +9,34 @@
 <body>
 <div class="page-wrapper">
     <header>
-        <nav class="navbar">
-            <h2> Mango Pests and Diseases Information Website</h2>
-            <ul>
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'pest_list' %}">Pest List</a></li>
-                <li><a href="{% url 'about' %}">About</a></li>
-                <li><a href="{% url 'report_pest' %}">Form</a></li>
-              {% if user.is_authenticated %}
-                    <form method="post" action="{% url 'logout' %}">
-                        {% csrf_token %}
-                            <button type="submit">Logout</button>
-                    </form>
-              {% else %}
-                    <li><a href="{% url 'login' %}">Login</a></li>
-                    <li><a href="{% url 'signup' %}">Sign Up</a></li>
-               {% endif %}
+  <nav class="navbar">
+    {% if request.path == '/login/' or request.path == '/signup/' %}
+    <h2>Mango Pests and Diseases Information Website</h2>
+    {% else %}
+      <h2>Mango Pests and Diseases Information Website</h2>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'pest_list' %}">Pest List</a></li>
+        <li><a href="{% url 'report_pest' %}">Report a Pest</a></li>
+        <li><a href="{% url 'preventive_tips' %}">Preventive Tips</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        {% if user.is_authenticated %}
+          <li>
+            <form method="post" action="{% url 'logout' %}" style="display: inline;">
+                {% csrf_token %}
+                <button type="submit" style="background-color: white; border: none; color: #ffc324 ; cursor: pointer;">
+                Logout
+                </button>
+            </form>
+        </li>
 
-            </ul>
-        </nav>
-    </header>
+        {% else %}
+          <li><a href="{% url 'login' %}">Login</a></li>
+        {% endif %}
+      </ul>
+    {% endif %}
+  </nav>
+</header>
 
     <main class="main-content">
         {% block content %}
