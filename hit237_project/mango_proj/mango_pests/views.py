@@ -4,7 +4,7 @@ from django.contrib.auth import login
 from django.contrib.auth.views import LogoutView
 from .pest_data import mango_pestdiseases
 from .forms import FarmerFarmForm, PestDetailsForm, TreatmentForm
-from .models import Farmer, Pest, Treatment
+from .models import Farmer, Pest, Treatment, PestReport
 from django.urls import reverse_lazy
 from django.views.generic import (ListView, UpdateView, DeleteView)
 
@@ -74,7 +74,7 @@ class CustomLogoutView(LogoutView):
     
 class PestReportListView(ListView):
     model = PestReport
-    template_name = 'mango_pests/list.html'
+    template_name = 'mango_pests/survey_list.html'
     context_object_name = 'pestreports'
 
 class PestReportUpdateView(UpdateView):

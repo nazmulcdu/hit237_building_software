@@ -1,0 +1,42 @@
+{% extends "mango_pests/base.html" %}
+{% load static %}
+
+{% block content %}
+<h1>Pest Reports</h1>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Farmer</th>
+      <th>Pest</th>
+      <th>Part of Plant</th>
+      <th>Location</th>
+      <th>Date of Observation</th>
+      <th>Observation</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for report in pestreports %}
+      <tr>
+        <td>{{ report.farmer.full_name }}</td>
+        <td>{{ report.pest_name }}</td>
+        <td>{{ report.affected_stage }}</td>
+        <td>{{ report.farmer.location }}</td>
+        <td>{{ report.date_of_observation|date:"Y-m-d" }}</td>
+        <td>{{ report.observation|truncatewords:15 }}</td>
+        <td>
+          <a href="{% url 'pestreport_edit' report.pk %}">Edit</a> |
+          <a href="{% url 'pestreport_delete' report.pk %}">Delete</a>
+        </td>
+      </tr>
+    {% empty %}
+      <tr>
+        <td colspan="7">No pest reports found.</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<a href="{% url 'report_pest' %}">Add New Pest Report</a>
+{% endblock %}

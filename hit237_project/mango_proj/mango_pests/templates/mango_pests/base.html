@@ -18,6 +18,7 @@
         <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'pest_list' %}">Pest List</a></li>
         <li><a href="{% url 'report_pest' %}">Make a Survey</a></li>
+        <li><a href="{% url 'pestreport_list' %}">Survey Reports</a></li>
         <li><a href="{% url 'about' %}">About</a></li>
         {% if user.is_authenticated %}
           <li>

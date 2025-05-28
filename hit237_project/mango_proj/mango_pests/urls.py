@@ -19,7 +19,7 @@ urlpatterns = [
     path('preventive-tips/', views.preventive_tips, name='preventive_tips'),
     #path('report/<int:pk>/edit/', views.report_edit, name='report_edit'),
     #path('report/<int:pk>/delete/', views.report_delete, name='report_delete'),
-    path('pestreports/', PestReportListView.as_view(), name='pestreport_list'),
-    path('pestreports/<int:pk>/edit/', PestReportUpdateView.as_view(), name='pestreport_edit'),
-    path('pestreports/<int:pk>/delete/', views.PestReportDeleteView.as_view(), name='pestreport_delete'),
+    path('survey_list/', PestReportListView.as_view(), name='pestreport_list'),
+    path('survey_list/<int:pk>/edit/', PestReportUpdateView.as_view(), name='pestreport_edit'),
+    path('survey_list/<int:pk>/delete/', views.PestReportDeleteView.as_view(), name='pestreport_delete'),
 ]
