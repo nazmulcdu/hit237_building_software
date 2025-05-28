@@ -2,71 +2,74 @@
 {% load static %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/preventive_tips.css' %}">
+<script src="{% static 'js/preventive_tips.js' %}" defer></script>
+
 <div class="tips-container">
-  <h1>Prevention Tips for Mango Pests & Diseases</h1>
+  <h1>🌿 Prevention Tips for Mango Pests & Diseases</h1>
 
   <section>
-    <h2>General Mango Care Tips</h2>
+    <h2>🌱 General Mango Care Tips</h2>
     <ul>
-      <li>Water trees regularly but avoid overwatering.</li>
-      <li>Apply mulch to retain soil moisture and control weeds.</li>
-      <li>Fertilize at the beginning of the growing season.</li>
+      <li>💧 Water trees regularly but avoid overwatering.</li>
+      <li>🌾 Apply mulch to retain soil moisture and control weeds.</li>
+      <li>🌿 Fertilize at the beginning of the growing season.</li>
     </ul>
   </section>
 
   <section>
-    <h2>Sanitation & Orchard Hygiene</h2>
+    <h2>🧹 Sanitation & Orchard Hygiene</h2>
     <ul>
-      <li>Clear fallen fruits and leaves weekly.</li>
-      <li>Disinfect tools after pruning infected branches.</li>
-      <li>Remove weeds that may harbor pests.</li>
+      <li>🗑️ Clear fallen fruits and leaves weekly.</li>
+      <li>🧼 Disinfect tools after pruning infected branches.</li>
+      <li>🌾 Remove weeds that may harbor pests.</li>
     </ul>
   </section>
 
   <section>
-    <h2>Pruning & Spacing</h2>
+    <h2>✂️ Pruning & Spacing</h2>
     <ul>
-      <li>Prune during the dry season to reduce fungal spread.</li>
-      <li>Maintain at least 5 meters between trees for airflow.</li>
-      <li>Remove dense inner branches to allow sunlight in.</li>
+      <li>🌤️ Prune during the dry season to reduce fungal spread.</li>
+      <li>📏 Maintain 5 meters between trees for airflow.</li>
+      <li>☀️ Remove dense inner branches to allow sunlight in.</li>
     </ul>
   </section>
 
   <section>
-    <h2>Biological Control</h2>
+    <h2>🦋 Biological Control</h2>
     <ul>
-      <li>Use neem oil as a natural pesticide.</li>
-      <li>Introduce predatory insects like ladybugs to eat aphids.</li>
-      <li>Install pheromone traps to monitor pest activity.</li> (Farmonaut 2024)
+      <li>🧪 Use neem oil as a natural pesticide.</li>
+      <li>🐞 Introduce predatory insects like ladybugs to eat aphids.</li>
+      <li>🪤 Install pheromone traps to monitor pest activity.</li>
     </ul>
   </section>
 
   <section>
-    <h2>Pest-Specific Prevention</h2>
+    <h2>🐛 Pest-Specific Prevention</h2>
     <ul>
       <li><strong>Mango Hopper:</strong> Avoid over-irrigation, apply insecticides during flowering.</li>
       <li><strong>Fruit Fly:</strong> Use bait traps, remove infested fruits.</li>
-      <li><strong>Mango Seed Weevil:</strong> Ensure proper spacing and apply sulfur sprays.</li>
+      <li><strong>Mango Seed Weevil:</strong> Ensure spacing and apply sulfur sprays.</li>
     </ul>
   </section>
 
-  <section>
-    <h2>Interactive Checklist</h2>
+  <section class="checklist-section">
+    <h2>✅ Interactive Checklist</h2>
     <ul id="checklist">
-      <li style="list-style-type: square;">Removed fallen fruits and leaves</li>
-      <li style="list-style-type: square;">Pruned dead/diseased branches</li>
-      <li style="list-style-type: square;">Applied organic pesticide</li>
+      <li><input type="checkbox"> Removed fallen fruits and leaves</li>
+      <li><input type="checkbox"> Pruned dead/diseased branches</li>
+      <li><input type="checkbox"> Applied organic pesticide</li>
     </ul>
+    <button id="resetChecklist">Reset Checklist</button>
   </section>
-  
+
   <section>
-    <h2>External Resources</h2>
+    <h2>🔗 External Resources</h2>
     <ul>
       <li><a href="https://www.fao.org" target="_blank">FAO - Food and Agriculture Organization</a></li>
       <li><a href="https://www.agriculture.gov.au/" target="_blank">Australian Dept. of Agriculture</a></li>
       <li><a href="https://www.cabi.org" target="_blank">CABI Invasive Species Compendium</a></li>
     </ul>
- (Peng & Christian 2005)
   </section>
 </div>
 {% endblock %}
