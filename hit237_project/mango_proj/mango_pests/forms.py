@@ -11,7 +11,7 @@ class PestDetailsForm(forms.ModelForm):
     class Meta:
         model = PestReport
         fields = ['pest_name', 'date_of_observation', 'observation', 'severity_level',
-                  'affected_stage', 'affected_farm_area', 'symptoms', 'image']
+                  'affected_stage', 'affected_plant_number', 'symptoms', 'image']
         widgets = {
             'date_of_observation': forms.DateInput(attrs={'type': 'date'}),
         }

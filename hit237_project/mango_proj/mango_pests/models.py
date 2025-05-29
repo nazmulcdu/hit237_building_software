@@ -38,7 +38,7 @@ class PestReport(models.Model):
     affected_stage = models.CharField(
         max_length=20,
         choices=[('Seedling','Seedling'), ('Vegetative','Vegetative'), ('Budding','Budding'),('Flowering','Flowering'), ('Fruiting','Fruiting'), ('Maturity','Maturity'), ('Harvest','Harvest')],default='Seedling')
-    affected_farm_area = models.CharField(max_length=150, default='')
+    affected_plant_number = models.CharField(max_length=150, default='')
     symptoms = models.CharField(max_length=250, default='')
     image = models.ImageField(upload_to='pests/images/', blank=True, null=True)  # Make image optional
     submitted_at = models.DateTimeField(auto_now_add=True)
