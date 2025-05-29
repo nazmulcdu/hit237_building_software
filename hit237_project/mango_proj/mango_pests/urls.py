@@ -4,7 +4,7 @@ from django.contrib.auth import views as auth_views
 from .views import CustomLogoutView
 from .views import PestReportListView
 from .views import PestReportUpdateView
-from .views import PestReportDeleteView
+
 
 urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='mango_pests/login.html'), name='login'),

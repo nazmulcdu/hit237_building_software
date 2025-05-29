@@ -30,9 +30,7 @@ class TreatmentForm(forms.ModelForm):
             'application_date': forms.DateInput(attrs={'type': 'date'}),
         }
         labels = {
-            'treatment_type': 'Treatment Type',
-            'product_name': 'Product Name',
-            'application_method': 'Application Method',
-            'application_date': 'Application Date',
-            'is_organic': 'Is Organic?',
+        'treatment_type': 'Treatment Type','product_name': 'Product Name',
+        'application_method': 'Application Method','application_date': 'Application Date',
+        'is_organic': 'Is Organic?',
         }

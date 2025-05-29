@@ -290,18 +290,6 @@ button:hover {
     margin: 0 auto;
 }
 
-/* Footer */
-footer {
-    
-    font-family:'Lucida Sans';
-    background-color: #004d00;
-    color: white;
-    text-align: center;
-    position: relative;
-    padding: 10px 0;
-    width:100%;
-}
-
 /* Form */
 .intro {
 
@@ -430,4 +418,16 @@ form button {
 
 form button:hover {
     background-color: #1b4332;
+}
+
+/* Footer */
+footer {
+    
+    font-family:'Lucida Sans';
+    background-color: #004d00;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding: 10px 0;
+    width:100%;
 }

@@ -48,17 +48,13 @@ class PestReport(models.Model):
 
 class Treatment(models.Model):
     TREATMENT_TYPE_CHOICES = [
-        ('Organic', 'Organic'),
-        ('Chemical', 'Chemical'),
-        ('Biological', 'Biological'),
-        ('Mechanical', 'Mechanical'),
+        ('Organic', 'Organic'),('Chemical', 'Chemical'),
+        ('Biological', 'Biological'),('Mechanical', 'Mechanical'),
     ]
 
     APPLICATION_METHOD_CHOICES = [
-        ('Spray', 'Spray'),
-        ('Soil drench', 'Soil drench'),
-        ('Injection', 'Injection'),
-        ('Manual removal', 'Manual removal'),
+        ('Spray', 'Spray'),('Soil drench', 'Soil drench'),
+        ('Injection', 'Injection'),('Manual removal', 'Manual removal'),
     ]
 
     pest_report = models.ForeignKey(PestReport, on_delete=models.CASCADE, related_name='treatments', null=True, blank=True)
